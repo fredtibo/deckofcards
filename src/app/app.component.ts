@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { PreferenceService } from './shared/services/preferences.service';
 
 @Component({
 	// tslint:disable-next-line
@@ -7,12 +8,14 @@ import { TranslateService } from '@ngx-translate/core';
 	template: `<router-outlet></router-outlet>`
 })
 export class AppComponent implements OnInit {
-	constructor(private translate: TranslateService) {
+	constructor(private translate: TranslateService, private preferenceService: PreferenceService) {
 	}
 
 	public ngOnInit(): void {
-		this.translate.setDefaultLang('en_US');
-		this.translate.use('en_US')
+		const language = this.preferenceService.getLanguage();
+
+		this.translate.setDefaultLang(language);
+		this.translate.use(language)
 			.subscribe(_ => {
 			});
 	}

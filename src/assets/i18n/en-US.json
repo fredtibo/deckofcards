@@ -1,10 +1,10 @@
 {
     "cards": {
-        "color": {
-            "Hearts": "hearts",
-            "Spades": "spades",
-            "Clubs": "clubs",
-            "Diamonds": "diamonds"
+        "colors": {
+            "hearts": "Hearts",
+            "spades": "Spades",
+            "clubs": "Clubs",
+            "diamonds": "Diamonds"
         },
         "values": [
             "Ace",

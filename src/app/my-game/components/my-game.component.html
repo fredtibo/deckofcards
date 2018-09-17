@@ -1,3 +1,11 @@
 <div>
-    buton
+    <button class="btn btn-primary" (click)="shuffle()">Shuffle</button>
+
+    <div *ngIf="this.deck.cards">
+        <span> {{ this.deck.cards.length }} Card(s) in the deck</span>
+        <button [disabled]="this.deck.cards.length===0" (click)="dealOneCard()">Deal One Card</button>
+
+        <app-deck-card *ngFor="let card of dealedCards" [card]="card" [visible]="true"></app-deck-card>
+
+    </div>
 </div>
