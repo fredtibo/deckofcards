@@ -9,11 +9,10 @@ import { ICard } from '../../interfaces';
 export class CardComponent implements OnInit {
     
     @Input() public card: ICard;
-    @Input() public visible: boolean;
+    @Input() public show: boolean;
 
     constructor() { }
 
     public ngOnInit(): void {
-        console.log(this.card);
     }
 }

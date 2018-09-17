@@ -1,6 +1,6 @@
 export enum CardColor {
-    Hearts = 'hearts',
-    Spades= 'spades',
-    Clubs= 'clubs',
-    Diamonds= 'diamonds'
+    hearts = 'hearts',
+    spades = 'spades',
+    clubs = 'clubs',
+    diamonds = 'diamonds'
 }

@@ -1,15 +1,12 @@
 <div class="card mb-4 box-shadow">
     <div class="card-body">
-        <div *ngIf="visible; else noVisible">
-            <span translate>{{ 'cards.values['+card.value+']' }}</span>
-            <span translate>{{ 'cards.colors' + card.color }}</span>
+        <div *ngIf="show; else noShow" class="center">
+            <span translate>{{ 'cards.values.' + card.value }}</span>
+            <span translate> of </span>
+            <span translate>{{ 'cards.colors.' + card.color }} </span>
         </div>
-        <ng-template #noVisible>
-            ???
+        <ng-template #noShow>
+            <span>:-)</span>
         </ng-template>
     </div>
-
-    <span translate>{{ 'cards.colors.hearts' }}</span>
-
-    {{ card | json }}
 </div>

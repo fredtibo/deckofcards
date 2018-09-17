@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div *ngIf="(cards||[]).length>0;else noCard">
+            <app-deck-card *ngFor="let card of cards" [card]="card" [show]="show"></app-deck-card>
+        </div>
+        <ng-template #noCard>
+            <span translate>words.noCard</span>
+        </ng-template>
+    </div>
+</div>
