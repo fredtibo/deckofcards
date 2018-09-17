@@ -1,0 +1,11 @@
+<div class="card mb-4 box-shadow">
+    <div class="card-body">
+        <div *ngIf="visible; else noVisible"></div>
+        {{ card.value }}
+        <br>
+        {{ card.color }}
+        <ng-template #noVisible>
+            ???
+        </ng-template>
+    </div>
+</div>

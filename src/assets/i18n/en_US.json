@@ -1,0 +1,26 @@
+{
+    "cards": {
+        "color": {
+            "Hearts": "hearts",
+            "Spades": "spades",
+            "Clubs": "clubs",
+            "Diamonds": "diamonds"
+        },
+        "values": [
+            "Ace",
+            "One", 
+            "Two", 
+            "Three", 
+            "Four", 
+            "Five", 
+            "Six", 
+            "Seven", 
+            "Height", 
+            "Nine", 
+            "Ten", 
+            "Jack", 
+            "Queen", 
+            "King"
+        ]
+    }
+}
