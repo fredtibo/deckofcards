@@ -2,22 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
 
-Contains page layout, child route, translation and some unit tests.
-
-Very basic UI!!!
-
 ## Development concept
 
-In this small demo I wanted to build a little piece of a few things we can do with angular
-    - Unit Tests;
-    - Translations;
-    - Layout selection by route and children routes;
-    - Dependency injection;
-    - Shared Module;
-    - Sparation by modules;
-    - Usage of selector and route to load component;
-    - Input decorator;
-    - Very basic UI skill :-)
+In this small demo I wanted to build a little piece of a few things we can do with angular in a very short period of time:
+- Unit Tests;
+- Translations;
+- Layout selection by route and children routes;
+- Dependency injection;
+- Shared Module;
+- Separation by modules;
+- Usage of selector and route to load component;
+- Input decorator;
+- Very basic UI skill :-)
+- Some fundamentals ng directives and concepts.
 
 ## Development server
 
