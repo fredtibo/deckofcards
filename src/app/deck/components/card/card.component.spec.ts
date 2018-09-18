@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardComponent } from './card.component';
+import { TranslateService, TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { SharedModule } from '../../../shared/shared.module';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpLoaderFactory } from '../../../app.module';
 
 describe('CardComponent', () => {
     let component: CardComponent;
@@ -8,7 +12,19 @@ describe('CardComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [CardComponent]
+            declarations: [CardComponent],
+            providers: [TranslateService],
+            imports: [
+                SharedModule,
+                HttpClientModule,
+                TranslateModule.forRoot({
+                    loader: {
+                        provide: TranslateLoader,
+                        useFactory: HttpLoaderFactory,
+                        deps: [HttpClient]
+                    }
+                })
+            ]
         })
             .compileComponents();
     }));
