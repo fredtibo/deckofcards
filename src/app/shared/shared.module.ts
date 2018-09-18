@@ -8,8 +8,6 @@ import { PreferenceService } from './services/preferences.service';
     ],
     providers:[
         PreferenceService
-    ],
-    exports: [
     ]
 })
 export class SharedModule { }

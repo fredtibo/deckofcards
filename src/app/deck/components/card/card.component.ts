@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ICard } from '../../interfaces';
 
 @Component({
@@ -7,7 +7,8 @@ import { ICard } from '../../interfaces';
     styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-    
+
+    @ViewChild('cardDiv') cardDiv;
     @Input() public card: ICard;
     @Input() public show: boolean;
     @Input() public index: number;
@@ -15,5 +16,14 @@ export class CardComponent implements OnInit {
     constructor() { }
 
     public ngOnInit(): void {
+        this.cardDiv.nativeElement.style.zIndex = this.index;
+    }
+
+    public mouseover(): void {
+        this.cardDiv.nativeElement.style.zIndex = 1000;
+    }
+
+    public mousout(): void {
+        this.cardDiv.nativeElement.style.zIndex = this.index;
     }
 }

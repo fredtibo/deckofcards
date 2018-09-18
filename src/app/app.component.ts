@@ -3,7 +3,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { PreferenceService } from './shared/services/preferences.service';
 
 @Component({
-	// tslint:disable-next-line
 	selector: 'body',
 	template: `<router-outlet></router-outlet>`
 })
@@ -16,7 +15,6 @@ export class AppComponent implements OnInit {
 
 		this.translate.setDefaultLang(language);
 		this.translate.use(language)
-			.subscribe(_ => {
-			});
+			.subscribe();
 	}
 }

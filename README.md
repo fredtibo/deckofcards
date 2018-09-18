@@ -6,6 +6,19 @@ Contains page layout, child route, translation and some unit tests.
 
 Very basic UI!!!
 
+## Development concept
+
+In this small demo I wanted to build a little piece of a few things we can do with angular
+    - Unit Tests;
+    - Translations;
+    - Layout selection by route and children routes;
+    - Dependency injection;
+    - Shared Module;
+    - Sparation by modules;
+    - Usage of selector and route to load component;
+    - Input decorator;
+    - Very basic UI skill :-)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

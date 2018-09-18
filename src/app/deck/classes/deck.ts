@@ -1,6 +1,5 @@
-import { ICard } from "../interfaces";
 import { CardColor } from "../enums";
-import { Observable, Subject } from "rxjs";
+import { ICard } from "../interfaces";
 
 export class Deck {
 
@@ -30,7 +29,7 @@ export class Deck {
     }
 
     public dealOneCard(): ICard{
-        if( this.cards.length > 0){
+        if( this.cards && this.cards.length > 0){
             return this.cards.pop();
         }
         return null;

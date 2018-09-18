@@ -1,4 +1,4 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import {
     RouterTestingModule
@@ -10,6 +10,9 @@ import { SharedModule } from './shared/shared.module';
 import { PreferenceService } from './shared/services/preferences.service';
 
 describe('AppComponent', () => {
+    let component: AppComponent;
+    let fixture: ComponentFixture<AppComponent>;
+
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [
@@ -20,13 +23,19 @@ describe('AppComponent', () => {
                 loader: {
                     provide: TranslateLoader,
                     useFactory: HttpLoaderFactory,
-                    deps: [HttpClient]
+                    deps: [HttpClient, ]
                 }
             })]
         }).compileComponents();
     }));
 
     it('should create the app', async(() => {
+        fixture = TestBed.createComponent(AppComponent);
+        component = fixture.debugElement.componentInstance;
+        expect(component).toBeTruthy();
+    }));
+
+    it('should create the component', async(() => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();

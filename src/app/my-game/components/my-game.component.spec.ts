@@ -1,16 +1,12 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MyGameComponent } from './my-game.component';
-import { DeckComponent } from '../../deck/components/deck/deck.component';
-import { CardComponent } from '../../deck/components/card/card.component';
-
-import {
-    RouterTestingModule
-} from '@angular/router/testing';
-import { SharedModule } from '../../shared/shared.module';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../../app.module';
+import { CardComponent } from '../../deck/components/card/card.component';
+import { DeckComponent } from '../../deck/components/deck/deck.component';
+import { SharedModule } from '../../shared/shared.module';
+import { MyGameComponent } from './my-game.component';
 
 describe('MyGameComponent', () => {
     let component: MyGameComponent;
@@ -22,7 +18,7 @@ describe('MyGameComponent', () => {
             providers: [
                 TranslateService
             ],
-            imports: [ 
+            imports: [
                 RouterTestingModule,
                 SharedModule,
                 HttpClientModule,
@@ -32,7 +28,7 @@ describe('MyGameComponent', () => {
                         useFactory: HttpLoaderFactory,
                         deps: [HttpClient]
                     }
-                }) ]
+                })]
         })
             .compileComponents();
     }));
@@ -48,9 +44,16 @@ describe('MyGameComponent', () => {
     });
 
     it('should shuffle', () => {
-        const fixture = TestBed.createComponent(MyGameComponent);
-        component = fixture.componentInstance;
         component.shuffle();
-        expect(component.dealOneCard()!==null).toBeTruthy();
+        expect(component.dealOneCard() !== null).toBeTruthy();
+    });
+
+
+    it('should be all shuffled', () => {
+        component.shuffle();
+        for (let i = 0; i < 52; i++) {
+            component.dealOneCard();
+        }
+        expect(component.dealedCards.length == 52).toBeTruthy();
     });
 });

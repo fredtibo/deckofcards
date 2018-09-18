@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MyGameRoutingModule } from './my-game.routing';
+import { NgModule } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { DeckModule } from '../deck/deck.module';
 import { MyGameComponent } from './components/my-game.component';
-import { TranslateModule } from '@ngx-translate/core';
+import { MyGameRoutingModule } from './my-game.routing';
 
 @NgModule({
     imports: [

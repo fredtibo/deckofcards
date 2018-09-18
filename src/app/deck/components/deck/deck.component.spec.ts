@@ -1,10 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { DeckComponent } from './deck.component';
-import { CardComponent } from '../card/card.component';
-import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
-import { HttpLoaderFactory } from '../../../app.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HttpLoaderFactory } from '../../../app.module';
 import { SharedModule } from '../../../shared/shared.module';
+import { CardComponent } from '../card/card.component';
+import { DeckComponent } from './deck.component';
 
 describe('DeckComponent', () => {
     let component: DeckComponent;

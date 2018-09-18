@@ -1,10 +1,9 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CardComponent } from './card.component';
-import { TranslateService, TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { SharedModule } from '../../../shared/shared.module';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../../../app.module';
+import { SharedModule } from '../../../shared/shared.module';
+import { CardComponent } from './card.component';
 
 describe('CardComponent', () => {
     let component: CardComponent;
