@@ -1,9 +1,9 @@
-<div class="card mb-4 box-shadow">
+<div class="card play mb-4 box-shadow" [ngStyle]="{'top': (index*6)+'px', 'left': (index*6)+'px'}">
     <div class="card-body">
         <div *ngIf="show; else noShow" class="center">
             <span translate>{{ 'cards.values.' + card.value }}</span>
-            <span translate> of </span>
-            <span translate>{{ 'cards.colors.' + card.color }} </span>
+            <span>&nbsp;</span><span translate>words.of</span><span>&nbsp;</span>
+            <span translate>{{ 'cards.colors.' + card.color }}</span>
         </div>
         <ng-template #noShow>
             <span>:-)</span>

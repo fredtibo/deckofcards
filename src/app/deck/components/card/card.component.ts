@@ -10,6 +10,7 @@ export class CardComponent implements OnInit {
     
     @Input() public card: ICard;
     @Input() public show: boolean;
+    @Input() public index: number;
 
     constructor() { }
 

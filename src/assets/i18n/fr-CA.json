@@ -3,7 +3,7 @@
         "colors": {
             "hearts": "Coeur",
             "spades": "Pique",
-            "clubs": "Trefle",
+            "clubs": "Trèfle",
             "diamonds": "Carreau"
         },
         "values": {
