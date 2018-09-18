@@ -1,0 +1,34 @@
+{
+    "cards": {
+        "colors": {
+            "hearts": "Coeur",
+            "spades": "Pique",
+            "clubs": "Trefle",
+            "diamonds": "Carreau"
+        },
+        "values": {
+            "1": "Ace",
+            "2": "Deux",
+            "3": "Trois",
+            "4": "Quatre",
+            "5": "Cinq",
+            "6": "Six",
+            "7": "Sept",
+            "8": "Huit",
+            "9": "Neuf",
+            "10": "Dix",
+            "11": "Valet",
+            "12": "Dame",
+            "13": "Roi"
+        }
+    },
+    "words": {
+        "of": "de",
+        "noCard": "Il n'y a pas de carte",
+        "inTheDeck": "{{value}} carte(s) dans le paquet.",
+        "dealOneCard": "Jouer une carte",
+        "shuffle": "Mélanger",
+        "language":"Langue",
+        "deckOfCards":"Jeu de cartes"
+    }
+}

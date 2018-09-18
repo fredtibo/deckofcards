@@ -1,6 +1,20 @@
-<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Deck of Cards</h1>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal" translate>words.deckOfCards</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <div class="btn-group" dropdown>
+            <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                aria-controls="dropdown-basic">{{ 'words.language' | translate }} <span class="caret"></span>
+            </button>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+                <li role="menuitem"><a class="dropdown-item" (click)="changeLanguage('fr-CA')">Français</a></li>
+                <li role="menuitem"><a class="dropdown-item" (click)="changeLanguage('en-US')">English</a></li>
+            </ul>
+        </div>
+    </nav>
 </div>
-<div class="container">
-    <router-outlet></router-outlet>
+
+<div class="jumbotron">
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
 </div>

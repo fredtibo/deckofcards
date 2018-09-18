@@ -27,6 +27,8 @@
         "noCard": "There is no card in the deck",
         "inTheDeck": "{{value}} card(s) in the deck",
         "dealOneCard": "Deal One Card",
-        "shuffle": "Shuffle"
+        "shuffle": "Shuffle",
+        "language":"Language",
+        "deckOfCards":"Deck of Cards"
     }
 }
