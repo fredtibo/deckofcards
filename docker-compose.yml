@@ -1,0 +1,10 @@
+version: "2"
+services:
+  deck_of_cards:
+    build: .
+    ports:
+      - "4200:4200"
+    volumes:
+      - ".:/opt/deck-of-cards"
+    stdin_open: true
+    tty: true
