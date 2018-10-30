@@ -12,4 +12,8 @@ export class YourGameComponent implements OnInit {
   ngOnInit() {
   }
 
+  public get someTest(): string {
+      return `Some Text`;
+  }
+
 }
