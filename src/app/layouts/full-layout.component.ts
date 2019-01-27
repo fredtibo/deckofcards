@@ -11,8 +11,9 @@ export class FullLayoutComponent {
     constructor(private translateService: TranslateService, private preferenceService: PreferenceService) { }
 
     public changeLanguage(language: string): void {
-    this.preferenceService.setLanguage(language);
-    this.translateService.use(language)
-			.subscribe();
+        this.preferenceService.setLanguage(language);
+        this.translateService.use(language)
+            .subscribe();
+    }
 }
-}
+
